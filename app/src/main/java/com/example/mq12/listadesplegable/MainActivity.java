@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private ExpandableListView listView;
     private ExpandableListAdapter listAdapter;
     private List<List<String>> participantes = new ArrayList<List<String>>();    // lista de participantes tugambeta.com
-    private List<String> listDataHeader;
+    private List<String> encabezado;
     private HashMap<String, List<String>> listHash;
 
     @Override
@@ -21,30 +21,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         listView = (ExpandableListView) findViewById(R.id.lvExp);
         initData();
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listHash);
+        listAdapter = new ExpandableListAdapter(this, encabezado, listHash);
         listView.setAdapter(listAdapter);
     }
 
     private void initData() {
-        listDataHeader = new ArrayList<>();
+        encabezado = new ArrayList<>();
         listHash = new HashMap<>();
 
-        listDataHeader.add("Alberto Corona 0");
-        listDataHeader.add("Angel Navarro 0");
-        listDataHeader.add("Miguel Lara 0");
-        listDataHeader.add("Rodolfo Pizarro 0");
-        listDataHeader.add("Hugo Sanchez 0");
-        listDataHeader.add("Adolfo Rios 0");
-        listDataHeader.add("Cuactemoc Blanco 0");
-        listDataHeader.add("Luis Roberto 0");
-        listDataHeader.add("Ramon Ramirez 0");
-        listDataHeader.add("Carlos Hermosillo 0");
-        listDataHeader.add("Luis Hernandez 0");
-        listDataHeader.add("Jose Saturnino 0");
-        listDataHeader.add("Manuel Lapuente 0");
-        listDataHeader.add("Lucas Ayala 0");
-        listDataHeader.add("Pavel Pardo 0");
-        listDataHeader.add("Guillermo Ochoa 0");
+        encabezado.add("Alberto Corona 0");
+        encabezado.add("Angel Navarro 0");
+        encabezado.add("Miguel Lara 0");
+        encabezado.add("Rodolfo Pizarro 0");
+        encabezado.add("Hugo Sanchez 0");
+        encabezado.add("Adolfo Rios 0");
+        encabezado.add("Cuactemoc Blanco 0");
+        encabezado.add("Luis Roberto 0");
+        encabezado.add("Ramon Ramirez 0");
+        encabezado.add("Carlos Hermosillo 0");
+        encabezado.add("Luis Hernandez 0");
+        encabezado.add("Jose Saturnino 0");
+        encabezado.add("Manuel Lapuente 0");
+        encabezado.add("Lucas Ayala 0");
+        encabezado.add("Pavel Pardo 0");
+        encabezado.add("Guillermo Ochoa 0");
 
         List<String> corona1 = new ArrayList<>();
         corona1.add(" Morelia G");
@@ -223,8 +223,8 @@ public class MainActivity extends AppCompatActivity {
         corona16.add("Veracruz G");
         participantes.add(corona16);
 
-        for (int i = 0; i < listDataHeader.size(); i++) {
-            listHash.put(listDataHeader.get(i), participantes.get(0)); // se llena el listHast de participantes.
+        for (int i = 0; i < encabezado.size(); i++) {
+            listHash.put(encabezado.get(i), participantes.get(0)); // se llena el listHast de participantes. encabezado y participantes deben tener el mismo tamaño
 
         }
 
